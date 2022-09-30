@@ -1,0 +1,44 @@
+
+GET http://localhost:3001/api/internalOrders HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/internalOrdersIssued HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/internalOrdersAccepted HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/internalOrders/6 HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3001/api/internalOrders HTTP/1.1
+content-type: application/json
+
+{
+            "issueDate":"2000/10/14 08:50",
+            "products": [{"SKUId":2,"description":"a product","price":10.99,"qty":3},
+                        {"SKUId":19,"description":"another product","price":11.99,"qty":3}],
+            "customerId" : 1
+        }
+
+
+###
+PUT http://localhost:3001/api/internalOrders/10 HTTP/1.1
+content-type: application/json
+
+{
+            "newState":"COMPLETED",
+            "products":[{"SkuID":1,"RFID":"12345678901234567890123456789016"},
+            {"SkuID":1,"RFID":"12345678901234567890123456789038"}]
+        }
+
+
+###
+DELETE http://localhost:3001/api/internalOrders/6 HTTP/1.1
+content-type: application/json
+
+###

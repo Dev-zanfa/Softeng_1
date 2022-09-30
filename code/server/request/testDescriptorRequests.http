@@ -1,0 +1,32 @@
+GET http://localhost:3001/api/testDescriptors HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/testDescriptors/ HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3001/api/testDescriptor HTTP/1.1
+content-type: application/json
+
+ {
+            "name":"test descriptor 4",
+            "procedureDescription":"This A test is described by...",
+            "idSKU" : 10
+        }
+
+###
+PUT http://localhost:3001/api/testDescriptor/8 HTTP/1.1
+content-type: application/json
+
+ {
+            "newName":"test descriptor NEW",
+            "newProcedureDescription":"This test is described by...",
+            "newIdSKU" : 10
+        }
+
+###
+DELETE http://localhost:3001/api/testDescriptor/9 HTTP/1.1
+content-type: application/json
+
+###

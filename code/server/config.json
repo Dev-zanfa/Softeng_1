@@ -1,0 +1,7 @@
+{
+    "dbAddresses": {
+        "PROD": "./database/EZWH.sqlite",
+        "TEST": "./database/EZWH_test.sqlite"
+    },
+    "secretKey": "oaibwf087ewyhfwuebf0237yrgfd23gfy32t"
+}

@@ -1,0 +1,58 @@
+
+GET http://localhost:3001/api/restockOrders HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/restockOrdersIssued HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/restockOrders/45 HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/restockOrders/37/returnItems HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3001/api/restockOrder HTTP/1.1
+content-type: application/json
+
+{
+            "issueDate":"2021/11/29 09:33",
+            "products": [{"SKUId":12,"description":"a product","price":10.99,"qty":30},
+                        {"SKUId":180,"description":"another product","price":11.99,"qty":20}],
+            "supplierId": 1
+        }
+
+
+###
+PUT http://localhost:3001/api/restockOrder/2 HTTP/1.1
+content-type: application/json
+
+{
+    "newState":"DELIVERY"
+}
+
+###
+PUT http://localhost:3001/api/restockOrder/3/skuItems HTTP/1.1
+content-type: application/json
+
+{
+    "skuItems" : [{"SKUId":12,"rfid":"12335678941234567890123456789016"},
+                    {"SKUId":12,"rfid":"13345675901234567890123456789017"}]
+}
+
+###
+PUT http://localhost:3001/api/restockOrder/2/transportNote HTTP/1.1
+content-type: application/json
+
+{
+            "transportNote":{"deliveryDate" : "2022/05/21"}
+        }
+
+###
+DELETE http://localhost:3001/api/restockOrder/1 HTTP/1.1
+content-type: application/json
+
+###
